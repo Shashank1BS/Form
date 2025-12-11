@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Registration Form</h1>
+
+    <form id="regForm" class="form-card" autocomplete="on">
+      <div class="row">
+        <label for="fullName">Full name</label>
+        <input id="fullName" name="fullName" type="text" required placeholder="Jane Doe">
+      </div>
+
+      <div class="row two-cols">
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567">
+        </div>
+      </div>
+
+      <div class="row two-cols">
+        <div>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" minlength="6" required>
+        </div>
+        <div>
+          <label for="confirmPassword">Confirm</label>
+          <input id="confirmPassword" name="confirmPassword" type="password" minlength="6" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Gender</label>
+        <div class="inline">
+          <label><input type="radio" name="gender" value="Female" checked> Female</label>
+          <label><input type="radio" name="gender" value="Male"> Male</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+      </div>
+
+      <div class="row two-cols">
+        <div>
+          <label for="dob">Date of birth</label>
+          <input id="dob" name="dob" type="date">
+        </div>
+        <div>
+          <label for="city">City</label>
+          <input id="city" name="city" type="text" placeholder="City">
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="2" placeholder="Street address"></textarea>
+      </div>
+
+      <div class="row">
+        <label>Hobbies</label>
+        <div class="inline">
+          <label><input type="checkbox" name="hobbies" value="Reading"> Reading</label>
+          <label><input type="checkbox" name="hobbies" value="Sports"> Sports</label>
+          <label><input type="checkbox" name="hobbies" value="Music"> Music</label>
+        </div>
+      </div>
+
+      <div class="row actions">
+        <button type="submit" class="btn primary">Submit</button>
+        <button type="reset" class="btn">Reset</button>
+      </div>
+    </form>
+
+    <section id="output" class="output hidden" aria-live="polite">
+      <!-- Formatted result will be injected here -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
